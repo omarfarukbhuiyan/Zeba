@@ -1,45 +1,40 @@
-html, body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 425px; /* Set the maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.menu-icon {
+  display: none; /* Hide the menu icon by default */
+  cursor: pointer;
+}
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation li {
+  margin-bottom: 10px;
+}
+@media (max-width: 425px) {
+  /* Apply styles only when screen width is 425px or less */
+  .menu-icon {
+    display: block; /* Display the menu icon for small screens */
   }
-  
-  .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
+  .navigation {
+    display: none; /* Hide the navigation list by default */
+    text-align: center;
   }
-  .div2{
-    height: 200px; width: 1000px;
-    background-color: black;
-    border: 5px blue solid;
+  .navigation.show {
+    display: block; /* Show the navigation list when the show class is added */
   }
-  
-  .header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .content {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+}
